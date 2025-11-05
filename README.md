@@ -7,4 +7,6 @@ If desired, values listed under "Tunable Parameters" can also be adjusted.
 
 To run the model, press the "Run Simulation" button.
 
-Modeled ventilator and patient effort signals will then be shown on the four axes.
+Modeled ventilator and patient effort signals will then be shown on the four axes. 
+
+Expiration signals are included for visual reference. However, note that the expiratory phase of the model has not been validated against clinical data.
