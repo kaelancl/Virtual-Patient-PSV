@@ -6,10 +6,10 @@
 %1 for more detailed case. In more detailed case, additional options
 %provided to function.
 
-ind_case = 1;
+ind_case = 0;
 
 %required inputs
-pat_num = 1; %patient number
+pat_num = 10; %patient number
 pmus_peak = 10; %peak pmus (absolute value), cmH2O
 num_breaths = 5; %number of breaths
 

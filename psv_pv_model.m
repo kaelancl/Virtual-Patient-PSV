@@ -49,11 +49,12 @@ end
 %load model
 general_model = load("general_pmus_model\"+string(ip.file_general_model(pat_num)));
 pmus_model = general_model.pmus_model;
+T_onset = ip.T_onset(pat_num);
 
 shortest_breath = 150;
 %scale magnitude and duration
 pmus_model_scaled = pmus_peak*pmus_model;
-Tinsp = m_t_insp*pmus_peak+int_t_insp; %+ median(T_onset);
+Tinsp = m_t_insp*pmus_peak+int_t_insp+T_onset;
 stretch_factor = Tinsp/shortest_breath; %factor to stretch/compress effort
 [P, Q] = rat(stretch_factor, 1e-3); %determine ratio using integer num + den values
 pmus_scaled_stretched = resample(pmus_model_scaled, P, Q);   %resample to adjust duration
